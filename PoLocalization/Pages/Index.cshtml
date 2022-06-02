@@ -1,0 +1,16 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@model IndexModel
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<p>@Localizer["Hello world!"]</p>
+
+<ul>
+    <li>@Localizer.Plural(1, "There is one item.", "There are {0} items.")</li>
+    <li>@Localizer.Plural(5, "There is one item.", "There are {0} items.")</li>
+</ul>
